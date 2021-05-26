@@ -75,7 +75,7 @@ public class Recuperatorio {
 	}	
 	
 	@Test
-	public void queSePuedaPresentarBatallaTerrestre() throws VehiculoInexistente, VehiculoIncompatible {
+	public void queSePuedaPresentarBatallaTerrestre() {
 		FuerzaArmada argentina = new FuerzaArmada();
 			
 		argentina.agregarVehiculo(new Tanque(5, "Renault FT"));
@@ -90,7 +90,7 @@ public class Recuperatorio {
 	}
 
 	@Test
-	public void queSePuedaPresentarBatallaNaval() throws VehiculoInexistente, VehiculoIncompatible {
+	public void queSePuedaPresentarBatallaNaval() {
 		FuerzaArmada argentina = new FuerzaArmada();
 			
 		argentina.agregarVehiculo(new Submarino(8, "A-10"));
@@ -110,8 +110,8 @@ public class Recuperatorio {
 		assertTrue(argentina.enviarALaBatalla("Pacifico", 13));		
 	}
 
-	@Test (expected = VehiculoIncompatible.class)
-	public void queSeNoSePuedaEnviarAUnaBatallaEnTierraUnBarco() throws VehiculoInexistente, VehiculoIncompatible {
+	@Test 
+	public void queSeNoSePuedaEnviarAUnaBatallaEnTierraUnBarco(){
 		FuerzaArmada argentina = new FuerzaArmada();
 			
 		argentina.agregarVehiculo(new Tanque(5, "Renault FT"));
@@ -125,8 +125,8 @@ public class Recuperatorio {
 
 	}
 	
-	@Test (expected = VehiculoInexistente.class)
-	public void queSeNoSePuedaEnviarAUnaBatallaUnVehiculoQueNoExista() throws VehiculoInexistente, VehiculoIncompatible {
+	@Test
+	public void queSeNoSePuedaEnviarAUnaBatallaUnVehiculoQueNoExista() {
 		FuerzaArmada argentina = new FuerzaArmada();
 			
 		argentina.agregarVehiculo(new Tanque(5, "Renault FT"));
