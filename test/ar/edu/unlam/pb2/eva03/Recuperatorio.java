@@ -4,6 +4,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import ar.edu.unlam.pb2.eva03.enumeradores.TipoDeBatalla;
+
 public class Recuperatorio {
 
 	@Test
@@ -83,6 +85,9 @@ public class Recuperatorio {
 		argentina.agregarVehiculo(new Camion(7, "T-72"));
 		
 		argentina.crearBatalla("San Lorenzo", TipoDeBatalla.TERRESTRE, 100.5, 20.3);
+		
+		/*Batalla batallaNueva = new Batalla(100.5, 20.3, TipoDeBatalla.TERRESTRE, "San Lorenzo");
+		argentina.crearBatalla(batallaNueva);*/
 
 		assertTrue(argentina.enviarALaBatalla("San Lorenzo", 5));
 		assertTrue(argentina.enviarALaBatalla("San Lorenzo", 6));
