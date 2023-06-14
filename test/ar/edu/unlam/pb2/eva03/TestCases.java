@@ -10,16 +10,13 @@ public class TestCases {
 
 	@Test
 	public void queSePuedaCrearUnObjetoVolador() {
-		Vehiculo avion = new Volador();
 		Volador avion = new Avion(1, "A-10");
 
-		assertEquals(0.0, avion.getAltura());
 		assertEquals(0.0, avion.getAltura(), 0.01);
 	}
 
 	@Test
 	public void queSePuedaCrearUnObjetoTerrestre() {
-		Vehiculo tanque = new Terrestre();
 		Terrestre tanque = new Tanque(5, "Renault FT");
 
 		assertEquals(0.0, tanque.getVelocidad());
@@ -28,7 +25,6 @@ public class TestCases {
 
 	@Test
 	public void queSePuedaCrearUnObjetoAcuatico() {
-		Vehiculo submarino = new Acuatico();
 		Acuatico submarino = new Submarino(8, "ARA - San Juan");
 
 		assertEquals(0.0, submarino.getProfundidad());
@@ -37,7 +33,6 @@ public class TestCases {
 
 	@Test
 	public void queSePuedaCrearUnObjetoAnfibio() {
-		Vehiculo var = new Anfibio();
 		Anfibio var = new Anfibio(12, "LARC-5");
 
 		assertEquals(0.0, var.getVelocidad());
@@ -48,7 +43,6 @@ public class TestCases {
 
 	@Test
 	public void queSePuedaCrearUnHidroavion() {
-		Vehiculo ag600 = new HidroAvion();
 		HidroAvion ag600 = new HidroAvion(12, "AG600");
 
 		assertEquals(0.0, ag600.getAltitud());
